@@ -38,7 +38,7 @@ export const jobs = createSlice({
       })
       .addCase(getClients.rejected, (state, action) => {
         state.clientsLoading = false;
-        throw new Error(action.error.message);
+        throw new Error(action?.error.message);
       })
     },
 });
